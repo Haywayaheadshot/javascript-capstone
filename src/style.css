@@ -5,6 +5,11 @@
   font-style: normal;
 }
 
+.font {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,13 +19,64 @@
 .mobile {
   display: flex;
   justify-content: space-between;
-  padding: 2em 1em;
+  padding: 2em 3em;
   border-bottom: 1px solid black;
-  border-width: 100%;
+  flex-wrap: wrap;
 }
 
 .links {
   display: flex;
   gap: 1em;
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.links-li {
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.Logo {
+  max-width: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px #000;
+}
+
+.ul-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 760px) {
+  .mobile {
+    padding: 1em 10em;
+  }
+
+  .Logo {
+    max-width: 80px;
+  }
+
+  .links-li {
+    font-size: 2.2rem;
+  }
 }
