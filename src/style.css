@@ -4,3 +4,23 @@
   font-weight: 900;
   font-style: normal;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 1em;
+  border-bottom: 1px solid black;
+  border-width: 100%;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+}
