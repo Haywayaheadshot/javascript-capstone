@@ -219,6 +219,18 @@ footer {
     font-size: 1.5rem;
   }
 
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 3vh 0;
+    justify-content: center;
+    align-items: center;
+
+    /* max-height: 60vh;
+    overflow-y: scroll; */
+  }
+
   .card {
     max-width: 30vw;
   }
