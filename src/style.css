@@ -141,6 +141,12 @@ footer {
   max-width: 10vw;
 }
 
+.popUp-section {
+  display: flex;
+  background-color: red;
+  height: 100vh;
+}
+
 @media (min-width: 760px) {
   .mobile {
     padding: 1em 10em;

@@ -1,4 +1,5 @@
 import likeMovie from '../images/icons/like-movie.png';
+import popup from './popup.js';
 
 const createCard = async () => {
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
@@ -26,5 +27,7 @@ const createCard = async () => {
     }
   });
 };
+
+document.querySelector('#body').addEventListener('click', popup);
 
 export default createCard;
