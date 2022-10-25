@@ -94,9 +94,10 @@ footer {
   align-items: center;
   gap: 20px;
   border-radius: 10px;
-background: #e0e0e0;
-box-shadow:  13px 13px 21px #a6a6a6,
-             -13px -13px 21px #ffffff;
+  background: #e0e0e0;
+  box-shadow:
+    13px 13px 21px #a6a6a6,
+    -13px -13px 21px #fff;
 }
 
 .card-title {
@@ -169,6 +170,7 @@ box-shadow:  13px 13px 21px #a6a6a6,
     padding: 3vh 0;
     justify-content: center;
     align-items: center;
+
     /* max-height: 60vh;
     overflow-y: scroll; */
   }
