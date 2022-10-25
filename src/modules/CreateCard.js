@@ -3,7 +3,7 @@ import btnListener from './btnListener.js';
 
 const createCard = async () => {
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
-    for (let i = 0; i < 20; i += 1) {
+    for (let i = 1; i < 21; i += 1) {
       // Create card image
       const cardContainer = document.querySelector('.cards-container');
       const cardDiv = document.createElement('div');
@@ -25,7 +25,7 @@ const createCard = async () => {
       cardContainer.appendChild(cardDiv);
     }
   });
-  for (let i = 0; i < 20; i += 1) {
+  for (let i = 1; i < 21; i += 1) {
     btnListener(i);
   }
 };

@@ -21,17 +21,16 @@ window.addEventListener('DOMContentLoaded', pop);
 //         }
 // });
 // g56oldW5hMhMsaYERIvY
-// const data = { id: 'game' };
+
+// ADD COMMENT
 // const add = async () => {
-//   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
+//   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/g56oldW5hMhMsaYERIvY/comments', {
 //     method: 'POST',
-//     body: JSON.stringify(data),
+//     body: JSON.stringify({ item_id: 3, username: 'Jersh', comment: 'ha' }),
 //     headers: {
 //       'Content-type': 'application/json; charset=UTF-8',
 //     },
 //   })
-//     .then((response) => response.json())
-//     .then((json) => console.log(json));
+//     .then((response) => console.log(response.status));
 // };
-
 // add();

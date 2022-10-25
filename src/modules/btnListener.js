@@ -1,4 +1,5 @@
 import change from './change.js';
+import here from './comments.js';
 
 export default function btnListener(ar) {
   const commentBtn = document.getElementById(`btn-${ar}`);
@@ -9,5 +10,6 @@ export default function btnListener(ar) {
       popupContainer.style.display = 'flex';
     }
     change(ar);
+    here(ar);
   });
 }

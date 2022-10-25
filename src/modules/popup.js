@@ -49,6 +49,9 @@ const pop = async () => {
   summarySerie.id = 'summarySerie';
   // summarySerie.innerHTML = completeResponse[i].summary;
   containerPopUp.appendChild(summarySerie);
-};
 
+  const commentContainer = document.createElement('div');
+  commentContainer.id = 'commentContainer';
+  containerPopUp.appendChild(commentContainer);
+};
 export default pop;

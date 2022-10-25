@@ -190,6 +190,12 @@ footer {
   margin-block: 2em;
 }
 
+#commentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 @media (min-width: 760px) {
   .mobile {
     padding: 1em 10em;
