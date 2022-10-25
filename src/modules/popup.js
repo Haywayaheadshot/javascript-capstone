@@ -1,4 +1,5 @@
 const popupContainer = document.querySelector('.popup-container');
+const body = document.querySelector('body');
 
 const pop = async () => {
   const myPop = document.createElement('section');
@@ -22,6 +23,7 @@ const pop = async () => {
   containerPopUp.appendChild(x);
   x.addEventListener('click', () => {
     popupContainer.style.display = '';
+    body.style.overflow = 'none';
   });
 
   const description = document.createElement('div');
