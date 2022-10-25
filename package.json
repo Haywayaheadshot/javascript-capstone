@@ -13,10 +13,9 @@
     "url": "git+https://github.com/Haywayaheadshot/javascript-capstone.git"
   },
   "keywords": [
-    "Movies",
+    "Shows",
     "Series",
-    "Movie Ratings",
-    "Watch Online"
+    "Show Ratings"
   ],
   "author": "Abubakar Ummar <haywayaheadshotstrategy.fx@gmail.com>",
   "license": "ISC",
