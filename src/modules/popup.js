@@ -53,5 +53,14 @@ const pop = async () => {
   const commentContainer = document.createElement('div');
   commentContainer.id = 'commentContainer';
   containerPopUp.appendChild(commentContainer);
+
+  const commentTitle = document.createElement('h2');
+  commentTitle.id = 'commentTitle';
+  commentTitle.innerHTML = 'Comments (X)';
+  commentContainer.appendChild(commentTitle);
+
+  const comments = document.createElement('div');
+  comments.id = 'comments';
+  commentContainer.appendChild(comments);
 };
 export default pop;
