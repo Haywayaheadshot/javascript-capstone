@@ -142,9 +142,43 @@ footer {
 }
 
 .popUp-section {
-  display: none;
+  display: flex;
   background-color: red;
-  height: 100vh;
+}
+
+.popup-container {
+  display: none;
+}
+
+.containerPopUp {
+  display: flex;
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 0.5em;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 3em;
+  z-index: 2;
+  text-align: center;
+}
+
+.close-popup {
+  position: absolute;
+  right: 2em;
+}
+
+.image-popup {
+  width: 30%;
+}
+
+.description {
+  display: flex;
+  gap: 4em;
+  margin-block: 2em;
 }
 
 @media (min-width: 760px) {

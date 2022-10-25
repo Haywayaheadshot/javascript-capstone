@@ -27,7 +27,6 @@ const createCard = async () => {
   });
   for (let i = 0; i < 20; i += 1) {
     btnListener(i);
-    console.log(i)
   }
 };
 export default createCard;

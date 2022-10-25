@@ -4,13 +4,13 @@ export default async function change(ar) {
     imgSrc.src = completeResponse[ar].image.medium;
 
     const titleSerie = document.getElementById('titleSerie');
-    titleSerie.innerHTML = completeResponse[ar].name;
+    titleSerie.innerHTML = `Title: ${completeResponse[ar].name}`;
 
     const languageSerie = document.getElementById('languageSerie');
-    languageSerie.innerHTML = completeResponse[ar].language;
+    languageSerie.innerHTML = `Language: ${completeResponse[ar].language}`;
 
     const siteSerie = document.getElementById('siteSerie');
-    siteSerie.innerHTML = completeResponse[ar].officialSite;
+    siteSerie.innerHTML = `WebSite: ${completeResponse[ar].officialSite}`;
 
     const summarySerie = document.getElementById('summarySerie');
     summarySerie.innerHTML = completeResponse[ar].summary;
