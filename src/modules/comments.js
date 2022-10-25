@@ -6,8 +6,6 @@ const here = async (ar) => {
   commentContainer.innerHTML = '';
   json.forEach((tv) => {
     const row = document.createElement('tr');
-    row.innerHTML = `<h3>${tv.creation_date} ${tv.username}:  ${tv.comment}</h3>`;
-    commentContainer.appendChild(row);
   });
 };
 
