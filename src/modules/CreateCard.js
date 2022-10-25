@@ -1,4 +1,5 @@
 import likeMovie from '../images/icons/like-movie.png';
+import btnListener from './btnListener.js';
 
 const createCard = async () => {
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
@@ -14,17 +15,18 @@ const createCard = async () => {
              <img src="${likeMovie}" class="like-movie" alt="Love Card" />
            </section>
            <div class="like-count font">Like count</div>
-           <button class="comments-button font">
+           <button class="comments-button font" id="btn-${i}">
              Comments
            </button>
            <button class="reservations-button font">
            Reservations
            </button>
            `;
-
       cardContainer.appendChild(cardDiv);
     }
   });
+  for (let i = 0; i < 20; i += 1) {
+    btnListener(i);
+  }
 };
-
 export default createCard;
