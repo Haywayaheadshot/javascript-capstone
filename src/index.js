@@ -1,5 +1,4 @@
 import './style.css';
-
 import pageLogo from './images/icons/page-logo.png';
 import createCard from './modules/CreateCard.js';
 import pop from './modules/popup.js';
@@ -11,15 +10,10 @@ logo.src = pageLogo;
 logo.alt = 'Movie Logo';
 logo.className = 'Logo';
 imageDiv.appendChild(logo);
-
 createCard();
 // pop();
-const commentBtn = document.querySelectorAll('.comments-button');
-commentBtn.forEach((btn) => {
-  btn.addEventListener('click', (arg) => {
-    pop(arg);
-  });
-});
+window.addEventListener('DOMContentLoaded', pop);
+
 // document.addEventListener('click', (event) => {
 //     if (event.target.className.includes('comments-button')) {
 //         pop();

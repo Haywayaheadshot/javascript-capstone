@@ -142,7 +142,7 @@ footer {
 }
 
 .popUp-section {
-  display: flex;
+  display: none;
   background-color: red;
   height: 100vh;
 }
