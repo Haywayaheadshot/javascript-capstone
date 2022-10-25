@@ -70,14 +70,75 @@ a:visited {
 footer {
   display: flex;
   align-items: center;
-  position: fixed;
   bottom: 0;
-  width: 100%;
   height: 4em;
   padding-left: 1em;
   font-weight: 600;
   border-top: 1px solid #000;
   background-color: grey;
+}
+
+.cards-container {
+  display: grid;
+  padding: 3vh 10vw;
+  gap: 30px;
+}
+
+.card {
+  max-width: 100vw;
+  padding: 2vh 3vw 5vh 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow:
+    13px 13px 21px #a6a6a6,
+    -13px -13px 21px #fff;
+}
+
+.card-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 3vh;
+  min-width: 80%;
+  align-items: center;
+}
+
+.like-count {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 80%;
+  min-height: 3vh;
+}
+
+.card-header-text {
+  font-size: 1.5rem;
+}
+
+.card-image {
+  max-width: 50vw;
+}
+
+.comments-button,
+.reservations-button {
+  min-width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #000;
+}
+
+.reservations-button {
+  min-width: 100%;
+}
+
+.like-movie {
+  max-width: 10vw;
 }
 
 @media (min-width: 760px) {
@@ -100,5 +161,33 @@ footer {
   .footer-text {
     margin-left: 8vw;
     font-size: 1.5rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 3vh 0;
+    justify-content: center;
+    align-items: center;
+
+    /* max-height: 60vh;
+    overflow-y: scroll; */
+  }
+
+  .card {
+    max-width: 30vw;
+  }
+
+  .card-image {
+    max-width: 10vw;
+  }
+
+  .like-movie {
+    max-width: 2vw;
+  }
+
+  .card-header-text {
+    font-size: 1rem;
   }
 }
