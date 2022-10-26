@@ -222,7 +222,8 @@ footer {
   align-items: flex-start;
 }
 
-.divCommentFields input, textarea {
+.divCommentFields input,
+textarea {
   padding: 0.5em;
   border-radius: 0.4em;
   border: 1px solid rgba(0, 0, 0, 0.288);

@@ -62,5 +62,37 @@ const pop = async () => {
   const comments = document.createElement('div');
   comments.id = 'comments';
   commentContainer.appendChild(comments);
+
+  const addCommentDiv = document.createElement('div');
+  addCommentDiv.id = 'addCommentDiv';
+  containerPopUp.appendChild(addCommentDiv);
+
+  const titleComment = document.createElement('h2');
+  titleComment.innerHTML = 'Add a comment';
+  addCommentDiv.appendChild(titleComment);
+
+  const divCommentFields = document.createElement('div');
+  divCommentFields.className = 'divCommentFields';
+  addCommentDiv.appendChild(divCommentFields);
+
+  const nameComment = document.createElement('input');
+  nameComment.id = 'nameComment';
+  nameComment.type = 'text';
+  nameComment.placeholder = 'Your name';
+  nameComment.className = 'inputComment';
+  divCommentFields.appendChild(nameComment);
+
+  const descriptionComment = document.createElement('textarea');
+  descriptionComment.id = 'descriptionComment';
+  descriptionComment.className = 'inputComment';
+  descriptionComment.placeholder = 'Your insights';
+  divCommentFields.appendChild(descriptionComment);
+
+  const btnAddComment = document.createElement('input');
+  btnAddComment.id = 'btnAddComment';
+  btnAddComment.className = 'btnAdd';
+  btnAddComment.type = 'submit';
+  btnAddComment.innerHTML = 'Comment';
+  divCommentFields.appendChild(btnAddComment);
 };
 export default pop;

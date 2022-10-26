@@ -1,5 +1,5 @@
 const here = async (ar) => {
-  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/g56oldW5hMhMsaYERIvY/comments?item_id=${ar}`);
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LH7R1NNqzZ0S67pGVqTQ/comments?item_id=${ar}`);
   const json = await response.json();
   const commentContainer = document.querySelector('#comments');
   commentContainer.innerHTML = '';
