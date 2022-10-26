@@ -1,31 +1,71 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
+import n from './TotalMovieCounter.js';
+// import likesCounter from './LikesCounter.js'
+
+const totalShowsNumber = document.querySelector('.shows-total-number');
 
 const createCard = async () => {
+  totalShowsNumber.innerText = parseInt((n - 1), 10);
+
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
-    for (let i = 1; i < 21; i += 1) {
-      // Create card image
+    for (let i = 1; i < n; i += 1) {
+      // Create card container
       const cardContainer = document.querySelector('.cards-container');
       const cardDiv = document.createElement('div');
       cardDiv.className = 'card';
       cardDiv.innerHTML = `
            <img src="${completeResponse[i].image.medium}" alt="Card Logo" class="card-image" />
-           <section class="card-title">
-             <h2 class="font card-header-text">${completeResponse[i].name}</h2>
-             <img src="${likeMovie}" class="like-movie" alt="Love Card" />
-           </section>
-           <div class="like-count font">Like count</div>
-           <button class="comments-button font" id="btn-${i}">
-             Comments
-           </button>
-           <button class="reservations-button font">
-           Reservations
-           </button>
            `;
       cardContainer.appendChild(cardDiv);
+
+      // Create card title and append to container
+      const cardTitle = document.createElement('section');
+      cardTitle.className = 'card-title';
+      cardTitle.innerHTML = `
+      <h2 class="font card-header-text">${completeResponse[i].name}</h2>
+      `;
+      cardDiv.appendChild(cardTitle);
+
+      // Create like show image and append to card container
+      const likeMovieImage = new Image();
+      likeMovieImage.src = likeMovie;
+      likeMovieImage.alt = 'Love Card';
+      likeMovieImage.className = 'like-movie';
+      cardTitle.appendChild(likeMovieImage);
+
+      // Create like count div and append to card container
+      const countLikes = document.createElement('section');
+      countLikes.className = 'like-count';
+      countLikes.classList.add = 'font';
+      countLikes.innerText = '0 Like';
+      cardTitle.appendChild(countLikes);
+
+      // add event listener to like movie image
+      likeMovieImage.addEventListener(('click'), () => {
+        if (parseInt((countLikes.innerText), 10) >= 1) {
+          countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Likes`;
+        } else {
+          countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Like`;
+        }
+        // likesCounter();
+      });
+
+      // Create comment button section and append to card container
+      const footerButtons = document.createElement('section');
+      footerButtons.className = 'footer-buttons';
+      footerButtons.innerHTML = `
+          <button class="comments-button font" id="btn-${i}">
+            Comments
+          </button>
+          <button class="reservations-button font">
+          Reservations
+          </button>
+     `;
+      cardTitle.appendChild(footerButtons);
     }
   });
-  for (let i = 1; i < 21; i += 1) {
+  for (let i = 1; i < n; i += 1) {
     btnListener(i);
   }
 };
