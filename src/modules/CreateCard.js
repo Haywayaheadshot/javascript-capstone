@@ -1,10 +1,11 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
+import n from './TotalMovieCounter.js';
+// import likesCounter from './LikesCounter.js'
 
 const totalShowsNumber = document.querySelector('.shows-total-number');
 
 const createCard = async () => {
-  const n = 21;
   totalShowsNumber.innerText = parseInt((n - 1), 10);
 
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
@@ -47,6 +48,7 @@ const createCard = async () => {
         } else {
           countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Like`;
         }
+        // likesCounter();
       });
 
       // Create comment button section and append to card container
