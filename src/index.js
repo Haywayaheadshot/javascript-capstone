@@ -22,15 +22,15 @@ window.addEventListener('DOMContentLoaded', pop);
 // });
 // g56oldW5hMhMsaYERIvY
 
-// ADD COMMENT
+// ADD Likes
 // const add = async () => {
-//   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/g56oldW5hMhMsaYERIvY/comments', {
+//   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/g56oldW5hMhMsaYERIvY/likes', {
 //     method: 'POST',
-//     body: JSON.stringify({ item_id: 3, username: 'Jersh', comment: 'ha' }),
+//     body: JSON.stringify({ item_id: "item1", }),
 //     headers: {
 //       'Content-type': 'application/json; charset=UTF-8',
 //     },
 //   })
-//     .then((response) => console.log(response.status));
 // };
+
 // add();

@@ -1,11 +1,12 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
 import n from './TotalMovieCounter.js';
+import getLikes from './GetLikes.js';
 // import likesCounter from './LikesCounter.js'
 
 const totalShowsNumber = document.querySelector('.shows-total-number');
 
-const createCard = async () => {
+const createCard = async (arg) => {
   totalShowsNumber.innerText = parseInt((n - 1), 10);
 
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
@@ -34,22 +35,32 @@ const createCard = async () => {
       likeMovieImage.className = 'like-movie';
       cardTitle.appendChild(likeMovieImage);
 
-      // Create like count div and append to card container
-      const countLikes = document.createElement('section');
-      countLikes.className = 'like-count';
-      countLikes.classList.add = 'font';
-      countLikes.innerText = '0 Like';
-      cardTitle.appendChild(countLikes);
-
       // add event listener to like movie image
-      likeMovieImage.addEventListener(('click'), () => {
+      likeMovieImage.addEventListener(('click'), async () => {
+        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/g56oldW5hMhMsaYERIvY/likes', {
+          method: 'POST',
+          body: JSON.stringify({ item_id: completeResponse[i].name }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        })
+          .then((postLikeResponse) => console.log(postLikeResponse.status));
+
         if (parseInt((countLikes.innerText), 10) >= 1) {
           countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Likes`;
         } else {
           countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Like`;
         }
+        getLikes();
         // likesCounter();
       });
+
+      // Create like count div and append to card container
+      const countLikes = document.createElement('section');
+      countLikes.className = 'like-count';
+      countLikes.classList.add = 'font';
+      countLikes.innerText = arg;
+      cardTitle.appendChild(countLikes);
 
       // Create comment button section and append to card container
       const footerButtons = document.createElement('section');
