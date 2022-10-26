@@ -209,6 +209,26 @@ footer {
   flex-direction: column;
 }
 
+#addCommentDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.divCommentFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.divCommentFields input,
+textarea {
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
 @media (min-width: 760px) {
   .mobile {
     padding: 1em 10em;

@@ -34,3 +34,14 @@ window.addEventListener('DOMContentLoaded', pop);
 //     .then((response) => console.log(response.status));
 // };
 // add();
+// Create new ID
+// const add = async () => {
+//   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
+//     method: 'POST',
+//     headers: {
+//       'Content-type': 'application/json; charset=UTF-8',
+//     },
+//   })
+//     .then((response) => console.log(response.json()));
+// };
+// add();
