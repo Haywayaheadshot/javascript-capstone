@@ -105,7 +105,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   min-height: 3vh;
-  min-width: 80%;
+  max-width: 80%;
   align-items: center;
 }
 
@@ -113,7 +113,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  min-width: 80%;
+  min-width: 100%;
   min-height: 3vh;
 }
 
@@ -127,7 +127,7 @@ footer {
 
 .comments-button,
 .reservations-button {
-  min-width: 80%;
+  width: 80%;
   border: 2px solid #000;
   min-height: 4vh;
   box-shadow: 3px 5px 3px #000;
@@ -195,6 +195,18 @@ footer {
   flex-direction: column;
   margin-block-start: 1em;
   gap: 0.6em;
+}
+
+.shows-total-number {
+  font-size: 1rem;
+  color: #303030c4;
+}
+
+.footer-buttons {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (min-width: 760px) {
@@ -267,5 +279,9 @@ footer {
   .image-popup {
     min-width: 10vw;
     max-height: 30vh;
+  }
+
+  .shows-total-number {
+    font-size: 1.5rem;
   }
 }
