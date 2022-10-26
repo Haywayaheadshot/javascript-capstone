@@ -2,21 +2,25 @@ const popupContainer = document.querySelector('.popup-container');
 const body = document.querySelector('body');
 
 const pop = async () => {
+  // Create the section to append all the items there
   const myPop = document.createElement('section');
   myPop.id = 'popUp-section';
   myPop.className = 'popUp-section';
   popupContainer.appendChild(myPop);
 
+  // Create div to append the popup items
   const containerPopUp = document.createElement('div');
   containerPopUp.className = 'containerPopUp';
   myPop.appendChild(containerPopUp);
 
+  // Create the image for each show, we set the image in the change.js file
   const imgSerie = document.createElement('img');
   imgSerie.id = 'imgSerie';
   imgSerie.className = 'image-popup';
   // imgSerie.src = completeResponse[i].image.medium;
   containerPopUp.appendChild(imgSerie);
 
+  // Create h2 for the X button in the popup
   const x = document.createElement('h2');
   x.innerHTML = 'X';
   x.className = 'close-popup';
@@ -26,39 +30,47 @@ const pop = async () => {
     body.style.overflow = 'none';
   });
 
+  // Create div to save the show description
   const description = document.createElement('div');
   description.className = 'description';
   containerPopUp.appendChild(description);
 
+  // Create h2 to append the title
   const titleSerie = document.createElement('h2');
   titleSerie.id = 'titleSerie';
   // titleSerie.innerHTML = completeResponse[i].name;
   description.appendChild(titleSerie);
 
+  // Create h2 to append the language of the show
   const languageSerie = document.createElement('h2');
   languageSerie.id = 'languageSerie';
   // languageSerie.innerHTML = completeResponse[i].language;
   description.appendChild(languageSerie);
 
+  // Create h2 to show the website of the show
   const siteSerie = document.createElement('h2');
   siteSerie.id = 'siteSerie';
   // siteSerie.innerHTML = completeResponse[i].officialSite;
   containerPopUp.appendChild(siteSerie);
 
+  // Create h3 to append the summary of the show
   const summarySerie = document.createElement('h3');
   summarySerie.id = 'summarySerie';
   // summarySerie.innerHTML = completeResponse[i].summary;
   containerPopUp.appendChild(summarySerie);
 
+  // Create the container to append the comments
   const commentContainer = document.createElement('div');
   commentContainer.id = 'commentContainer';
   containerPopUp.appendChild(commentContainer);
 
+  // Create h2 to append the title
   const commentTitle = document.createElement('h2');
   commentTitle.id = 'commentTitle';
   commentTitle.innerHTML = 'Comments (X)';
   commentContainer.appendChild(commentTitle);
 
+  // Create div to append the comments
   const comments = document.createElement('div');
   comments.id = 'comments';
   commentContainer.appendChild(comments);
