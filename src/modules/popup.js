@@ -30,6 +30,8 @@ const pop = async () => {
   });
 
   const allTextContainer = document.createElement('section');
+  allTextContainer.className = 'main-popupContainer';
+
   containerPopUp.appendChild(allTextContainer);
   // Create div to save the show description
   const description = document.createElement('div');
