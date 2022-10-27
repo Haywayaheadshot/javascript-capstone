@@ -154,13 +154,10 @@ footer {
 
 .like-movie {
   max-width: 10vw;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  -moz-transition: all 0.3s ease-in-out 0.1s;
-  -o-transition: all 0.3s ease-in-out 0.1s;
 }
 
 .like-movie:active {
-  transform: scale(1.5);
+  transform: scale(2);
 }
 
 .popUp-section {
@@ -198,18 +195,25 @@ footer {
   background: #e0e0e0;
 }
 
+.image-popup {
+  box-shadow: 0 0 20px #000;
+  max-height: 20vh;
+}
+
 .close-popup {
   position: absolute;
   right: 0.5em;
-  top: 0.7em;
+  top: 1.2em;
   cursor: pointer;
+  font-size: x-large;
 }
 
 .description {
   display: flex;
   text-align: center;
-  padding: 0 10vw;
   font-size: 0.7rem;
+  gap: 3em;
+  justify-content: space-evenly;
 }
 
 #comments {
@@ -376,6 +380,7 @@ textarea {
 
   .image-popup {
     box-shadow: 0 0 20px #000;
+    max-height: 100%;
   }
 
   #siteSerie {
@@ -383,8 +388,29 @@ textarea {
     color: blue;
   }
 
+  .main-popupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 50%;
+  }
+
+  .close-popup {
+    position: absolute;
+    right: 3.5em;
+    top: 5em;
+    cursor: pointer;
+    font-size: x-large;
+  }
+
   #summarySerie {
     font-size: 1rem;
+  }
+
+  #commentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .shows-total-number {
