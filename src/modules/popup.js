@@ -65,9 +65,19 @@ const pop = async () => {
   containerPopUp.appendChild(commentContainer);
 
   // Create h2 to append the title
+
+  // const qwe = async () => {
+  //   const variable = await commentCounter();
+  //   const commentTitle = document.createElement('h2');
+  //   commentTitle.id = 'commentTitle';
+  //   commentTitle.innerHTML = variable;
+  //   commentContainer.appendChild(commentTitle);
+  //   qwe();
+  // };
+
   const commentTitle = document.createElement('h2');
   commentTitle.id = 'commentTitle';
-  commentTitle.innerHTML = 'Comments (X)';
+  commentTitle.innerHTML = 'Comments X';
   commentContainer.appendChild(commentTitle);
 
   // Create div to append the comments
