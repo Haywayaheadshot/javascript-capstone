@@ -50,6 +50,16 @@ const createCard = async () => {
         });
       };
       asd();
+      likeMovieImage.addEventListener('click', async () => {
+        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LH7R1NNqzZ0S67pGVqTQ/likes', {
+          method: 'POST',
+          body: JSON.stringify({ item_id: completeResponse[i].name }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+        asd();
+      });
 
       // Create comment button section and append to card container
       const footerButtons = document.createElement('section');
