@@ -1,5 +1,6 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
+import getLike from './likeGet.js';
 import n from './TotalMovieCounter.js';
 // import likesCounter from './LikesCounter.js'
 
@@ -40,16 +41,15 @@ const createCard = async () => {
       countLikes.classList.add = 'font';
       countLikes.innerText = '0 Like';
       cardTitle.appendChild(countLikes);
-
-      // add event listener to like movie image
-      likeMovieImage.addEventListener(('click'), () => {
-        if (parseInt((countLikes.innerText), 10) >= 1) {
-          countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Likes`;
-        } else {
-          countLikes.innerText = `${(parseInt((countLikes.innerText), 10) + 1)} Like`;
-        }
-        // likesCounter();
-      });
+      const asd = async () => {
+        const data = await getLike();
+        await data.forEach((like) => {
+          if (like.item_id === completeResponse[i].name) {
+            countLikes.innerHTML = like.likes;
+          }
+        });
+      };
+      asd();
 
       // Create comment button section and append to card container
       const footerButtons = document.createElement('section');
