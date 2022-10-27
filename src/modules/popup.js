@@ -17,7 +17,6 @@ const pop = async () => {
   const imgSerie = document.createElement('img');
   imgSerie.id = 'imgSerie';
   imgSerie.className = 'image-popup';
-  // imgSerie.src = completeResponse[i].image.medium;
   containerPopUp.appendChild(imgSerie);
 
   // Create h2 for the X button in the popup
@@ -30,10 +29,12 @@ const pop = async () => {
     body.style.overflow = 'none';
   });
 
+  const allTextContainer = document.createElement('section');
+  containerPopUp.appendChild(allTextContainer);
   // Create div to save the show description
   const description = document.createElement('div');
   description.className = 'description';
-  containerPopUp.appendChild(description);
+  allTextContainer.appendChild(description);
 
   // Create h2 to append the title
   const titleSerie = document.createElement('h2');
@@ -51,29 +52,20 @@ const pop = async () => {
   const siteSerie = document.createElement('h2');
   siteSerie.id = 'siteSerie';
   // siteSerie.innerHTML = completeResponse[i].officialSite;
-  containerPopUp.appendChild(siteSerie);
+  allTextContainer.appendChild(siteSerie);
 
   // Create h3 to append the summary of the show
   const summarySerie = document.createElement('h3');
   summarySerie.id = 'summarySerie';
   // summarySerie.innerHTML = completeResponse[i].summary;
-  containerPopUp.appendChild(summarySerie);
+  allTextContainer.appendChild(summarySerie);
 
   // Create the container to append the comments
   const commentContainer = document.createElement('div');
   commentContainer.id = 'commentContainer';
-  containerPopUp.appendChild(commentContainer);
+  allTextContainer.appendChild(commentContainer);
 
   // Create h2 to append the title
-
-  // const qwe = async () => {
-  //   const variable = await commentCounter();
-  //   const commentTitle = document.createElement('h2');
-  //   commentTitle.id = 'commentTitle';
-  //   commentTitle.innerHTML = variable;
-  //   commentContainer.appendChild(commentTitle);
-  //   qwe();
-  // };
 
   const commentTitle = document.createElement('h2');
   commentTitle.id = 'commentTitle';
