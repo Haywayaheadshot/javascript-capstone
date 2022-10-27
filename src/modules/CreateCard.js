@@ -39,17 +39,21 @@ const createCard = async () => {
       const countLikes = document.createElement('section');
       countLikes.className = 'like-count';
       countLikes.classList.add = 'font';
-      countLikes.innerText = '0 Like';
       cardTitle.appendChild(countLikes);
       const asd = async () => {
         const data = await getLike();
         await data.forEach((like) => {
           if (like.item_id === completeResponse[i].name) {
-            countLikes.innerHTML = like.likes;
+            if (like.likes <= 1) {
+              countLikes.innerHTML = `${like.likes} Like`;
+            } else {
+              countLikes.innerHTML = `${like.likes} Likes`;
+            }
           }
         });
       };
       asd();
+      countLikes.innerText = '0 Like';
       likeMovieImage.addEventListener('click', async () => {
         await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LH7R1NNqzZ0S67pGVqTQ/likes', {
           method: 'POST',
