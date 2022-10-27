@@ -2,30 +2,45 @@
 
 # JavaScript Capstone
 
-> 
+> This is a webpage that displays tv shows from a REST API. It allows a user to like and comment on their favourite shows. The number of comments, likes and the description in the comments which includes date and name are sent to APIs too.
 
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
+- Webpack
+- Api
 
 ## Getting Started
 
-### Usage
-- git clone git@github.com: ....
-- cd ...
-- npm install
-- npm run start 
+To get a local copy up and running follow these simple example steps.
 
-### Live GitHub Page
-- https://haywayaheadshot.github.io/javascript-capstone/
+### Prerequisites
+- You need to have git installed in your machine.
+- A text editor or terminal
+- A web browser to view output
+
+### Setup
+- To clone the repository run this command - " git clone https://github.com/Haywayaheadshot/javascript-capstone.git "
+- cd javascript-capstone
+- npm install
+- npm start
+
+### Click below to view live demo
+- [Live Demo](https://haywayaheadshot.github.io/javascript-capstone/)
+
+### Watch Video about our project below
+
+click [here](https://drive.google.com/file/d/10Z37uyusjTJHQL80UtxFJR4W-7fJU3VB/view) to watch video about project
 
 ## Authors
 
 👤 **Author1**
 
 - GitHub: [@Haywayaheadshot](https://github.com/Haywayaheadshot)
+- Twitter: [@haywayalive](https://twitter.com/haywayalive)
+- LinkedIn: [Abubakar Ummar](https://linkedin.com/in/abubakar-ummar-4b6643245)
 
 👤 **Author2**
 
@@ -42,9 +57,10 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
+- Thanks to Microverse for their curriculum
+- Thanks to morning session team
+- Thanks to stand up team
+- Thanks to code reviewers
 
 ## 📝 License
 
