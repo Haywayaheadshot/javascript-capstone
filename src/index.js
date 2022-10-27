@@ -2,6 +2,7 @@ import './style.css';
 import pageLogo from './images/icons/page-logo.png';
 import createCard from './modules/CreateCard.js';
 import pop from './modules/popup.js';
+import getLike from './modules/likeGet.js';
 
 // create new image?
 const imageDiv = document.querySelector('.logo-div');
@@ -13,7 +14,7 @@ imageDiv.appendChild(logo);
 createCard();
 // pop();
 window.addEventListener('DOMContentLoaded', pop);
-
+getLike();
 // document.addEventListener('click', (event) => {
 //     if (event.target.className.includes('comments-button')) {
 //         pop();
