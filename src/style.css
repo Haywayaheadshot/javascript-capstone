@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+body {
+  background: #e0e0e0;
+}
+
 .font {
   font-family: 'Times New Roman', Times, serif;
   font-style: normal;
@@ -109,6 +113,16 @@ footer {
   align-items: center;
 }
 
+#siteSerie {
+  font-size: 0.7rem;
+  color: blue;
+}
+
+#summarySerie {
+  font-size: 12px;
+  padding: 1vh 2vw;
+}
+
 .like-count {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +154,13 @@ footer {
 
 .like-movie {
   max-width: 10vw;
+  -webkit-transition: all 0.3s ease-in-out 0.1s;
+  -moz-transition: all 0.3s ease-in-out 0.1s;
+  -o-transition: all 0.3s ease-in-out 0.1s;
+}
+
+.like-movie:active {
+  transform: scale(1.5);
 }
 
 .popUp-section {
@@ -182,11 +203,6 @@ footer {
   right: 0.5em;
   top: 0.7em;
   cursor: pointer;
-}
-
-.image-popup {
-  min-width: 60vw;
-  max-height: 30vh;
 }
 
 .description {
@@ -237,6 +253,59 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
+.comments-button:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.comments-button:active {
+  width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  cursor: pointer;
+  background-color: orange;
+  color: #fff;
+}
+
+.reservations-button:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.reservations-button:active {
+  width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: orange;
+  color: #fff;
+}
+
+.btnAdd {
+  border: 2px solid #000;
+  box-shadow: 3px 5px 3px #000;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.btnAdd:active {
+  border: 2px solid #000;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: orange;
+  color: #fff;
+}
+
 @media (min-width: 760px) {
   .mobile {
     padding: 1em 10em;
@@ -260,15 +329,11 @@ textarea {
   }
 
   .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 3vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 3vh 10vw;
     justify-content: center;
     align-items: center;
-
-    /* max-height: 60vh;
-    overflow-y: scroll; */
   }
 
   .card {
@@ -289,16 +354,20 @@ textarea {
 
   .containerPopUp {
     display: flex;
-    background-color: #fff;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     top: 20px;
-    border-radius: 20px;
     padding: 7em;
-    gap: 0.5em;
+    gap: 1em;
     max-width: inherit;
     text-align: center;
-    border: 3px solid black;
+    border: 2px solid #7d7d7d;
+    height: 70vh;
+    border-radius: 35px;
+    background: #e0e0e0;
+    box-shadow:
+      inset 29px 29px 57px #7d7d7d,
+      inset -29px -29px 57px #fff;
   }
 
   .popUp-section {
@@ -306,7 +375,16 @@ textarea {
   }
 
   .image-popup {
-    min-width: 30vw;
+    box-shadow: 0 0 20px #000;
+  }
+
+  #siteSerie {
+    font-size: 1rem;
+    color: blue;
+  }
+
+  #summarySerie {
+    font-size: 1rem;
   }
 
   .shows-total-number {

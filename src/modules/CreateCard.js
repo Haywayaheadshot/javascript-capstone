@@ -2,7 +2,6 @@ import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
 import getLike from './likeGet.js';
 import n from './TotalMovieCounter.js';
-// import likesCounter from './LikesCounter.js'
 
 const totalShowsNumber = document.querySelector('.shows-total-number');
 

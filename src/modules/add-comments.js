@@ -11,11 +11,6 @@ const addComment = async () => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  //   .then((response) => console.log('comment' + response.status));
-  //   e.target.reset();
-  //   document.querySelector('#input-name').value = '';
-  //   document.querySelector('#input-score').value = '';
-  //   console.log(idBtn);
   here(idBtn);
 };
 
