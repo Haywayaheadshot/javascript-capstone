@@ -1,3 +1,4 @@
-const n = 21;
-
-export default n;
+const cardCounter = (totalCards, count) => {
+  totalCards.innerHTML = `${count}`;
+};
+export default cardCounter;

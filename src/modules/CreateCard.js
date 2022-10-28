@@ -1,15 +1,14 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
 import getLike from './likeGet.js';
-import n from './TotalMovieCounter.js';
+import countingCards from './TotalMovieCounter.js';
+// import n from './TotalMovieCounter.js';
 
 const totalShowsNumber = document.querySelector('.shows-total-number');
-
 const createCard = async () => {
-  totalShowsNumber.innerText = parseInt((n - 1), 10);
-
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
-    for (let i = 1; i < n; i += 1) {
+    const n = completeResponse.slice(0, 20);
+    for (let i = 0; i < n.length; i += 1) {
       // Create card container
       const cardContainer = document.querySelector('.cards-container');
       const cardDiv = document.createElement('div');
@@ -39,7 +38,7 @@ const createCard = async () => {
       countLikes.className = 'like-count';
       countLikes.classList.add = 'font';
       cardTitle.appendChild(countLikes);
-      const asd = async () => {
+      const getLikeFromAPI = async () => {
         const data = await getLike();
         await data.forEach((like) => {
           if (like.item_id === completeResponse[i].name) {
@@ -51,7 +50,7 @@ const createCard = async () => {
           }
         });
       };
-      asd();
+      getLikeFromAPI();
       countLikes.innerText = '0 Like';
       likeMovieImage.addEventListener('click', async () => {
         await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LH7R1NNqzZ0S67pGVqTQ/likes', {
@@ -61,7 +60,7 @@ const createCard = async () => {
             'Content-type': 'application/json; charset=UTF-8',
           },
         });
-        asd();
+        getLikeFromAPI();
       });
 
       // Create comment button section and append to card container
@@ -77,8 +76,10 @@ const createCard = async () => {
      `;
       cardTitle.appendChild(footerButtons);
     }
+    const cards = document.querySelectorAll('.card');
+    countingCards(totalShowsNumber, cards.length);
   });
-  for (let i = 1; i < n; i += 1) {
+  for (let i = 0; i < parseInt(totalShowsNumber.innerText, 10); i += 1) {
     btnListener(i);
   }
 };
