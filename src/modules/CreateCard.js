@@ -1,15 +1,16 @@
 import likeMovie from '../images/icons/like-movie.png';
 import btnListener from './btnListener.js';
 import getLike from './likeGet.js';
-import n from './TotalMovieCounter.js';
+// import n from './TotalMovieCounter.js';
 
 const totalShowsNumber = document.querySelector('.shows-total-number');
 
 const createCard = async () => {
-  totalShowsNumber.innerText = parseInt((n - 1), 10);
 
   await fetch('https://api.tvmaze.com/shows').then((response) => response.json()).then((completeResponse) => {
-    for (let i = 1; i < n; i += 1) {
+    let n = completeResponse.slice(0,20);
+    for (let i = 0; i < n.length; i += 1) {
+      totalShowsNumber.innerText = parseInt((n.length), 10);
       // Create card container
       const cardContainer = document.querySelector('.cards-container');
       const cardDiv = document.createElement('div');
@@ -78,7 +79,7 @@ const createCard = async () => {
       cardTitle.appendChild(footerButtons);
     }
   });
-  for (let i = 1; i < n; i += 1) {
+  for (let i = 0; i < parseInt(totalShowsNumber.innerText); i += 1) {
     btnListener(i);
   }
 };
