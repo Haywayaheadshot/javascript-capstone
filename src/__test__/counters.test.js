@@ -1,3 +1,4 @@
+import cardCounter from '../modules/TotalMovieCounter.js';
 /**
  * @jest-environment jsdom
  */
@@ -7,6 +8,7 @@ describe('Testing', () => {
     const comments = document.getElementById('comments').childNodes.length;
     expect(comments).toBe(5);
   });
+
   test('Should check number of likes', () => {
     document.body.innerHTML = `<div class="card">
     <img src="https://static.tvmaze.com/uploads/images/medium_portrait/163/407679.jpg" alt="Card Logo" class="card-image">
@@ -23,29 +25,37 @@ describe('Testing', () => {
     const likes = document.querySelector('.like-count').innerHTML;
     expect(likes).toBe('3 Likes');
   });
+
   test('Total number of shows', () => {
-    const shows = [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-    ];
-    expect(shows.length).toBe(20);
+    document.body.innerHTML = `<nav class="mobile">
+    <div class="logo-div"><img src="http://localhost:8080/57a1848e29052255134f.png" alt="Movie Logo" class="Logo"></div>
+    <div class="ul-div">
+      <ul class="links">
+        <li>
+          <a id='numberShow' class="links-li font" href="#body">
+           
+
+
+          </a>
+        </li>
+        <li><a class="links-li font" href="#">Top Rated</a></li>
+      </ul>
+    </div>
+  </nav>`;
+    const numberShow = document.querySelector('#numberShow');
+    cardCounter(numberShow, 40);
+    expect(numberShow.innerHTML).toEqual('40');
+  });
+
+  test('Total number of comments', () => {
+    document.body.innerHTML = `<div id="commentContainer">
+                                  <h2 id="commentTitle">Comments (1)</h2>
+                                    <div id="comments">
+
+                                    </div>
+                                </div>`;
+    const numberComments = document.querySelector('#comments');
+    cardCounter(numberComments, 60);
+    expect(numberComments.innerHTML).toEqual('60');
   });
 });
