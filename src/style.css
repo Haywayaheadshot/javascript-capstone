@@ -1,0 +1,419 @@
+@font-face {
+  font-family: "fontAwesome";
+  src: url(./font/my-font.woff2) format("woff2"), url(./font/my-font.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  background: #e0e0e0;
+}
+
+.font {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 3em;
+  border-bottom: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.links-li {
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.Logo {
+  max-width: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px #000;
+}
+
+.ul-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  height: 4em;
+  padding-left: 1em;
+  font-weight: 600;
+  border-top: 1px solid #000;
+  background-color: grey;
+}
+
+.cards-container {
+  display: grid;
+  padding: 3vh 10vw;
+  gap: 30px;
+}
+
+.card {
+  max-width: 100vw;
+  padding: 2vh 3vw 5vh 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow:
+    13px 13px 21px #a6a6a6,
+    -13px -13px 21px #fff;
+}
+
+.card-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 3vh;
+  max-width: 80%;
+  align-items: center;
+}
+
+#siteSerie {
+  font-size: 0.7rem;
+  color: blue;
+}
+
+#summarySerie {
+  font-size: 12px;
+  padding: 1vh 2vw;
+}
+
+.like-count {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 100%;
+  min-height: 3vh;
+}
+
+.card-header-text {
+  font-size: 1.5rem;
+}
+
+.card-image {
+  max-width: 50vw;
+}
+
+.comments-button,
+.reservations-button {
+  width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #000;
+  cursor: pointer;
+}
+
+.reservations-button {
+  min-width: 100%;
+}
+
+.like-movie {
+  max-width: 10vw;
+}
+
+.like-movie:active {
+  transform: scale(2);
+}
+
+.popUp-section {
+  display: flex;
+  max-width: 80vw;
+  max-height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  display: none;
+  justify-content: center;
+  font-size: 10px;
+  max-height: inherit;
+}
+
+.containerPopUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  padding: 3em 0;
+  gap: 0.5em;
+  max-width: inherit;
+  min-height: inherit;
+  text-align: center;
+  border: 2px solid black;
+  justify-content: center;
+  box-shadow:
+    13px 13px 21px #a6a6a6,
+    -13px -13px 21px #fff;
+  border-radius: 10px;
+  background: #e0e0e0;
+}
+
+.image-popup {
+  box-shadow: 0 0 20px #000;
+  max-height: 20vh;
+}
+
+.close-popup {
+  position: absolute;
+  right: 0.5em;
+  top: 1.2em;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.description {
+  display: flex;
+  text-align: center;
+  font-size: 0.7rem;
+  gap: 3em;
+  justify-content: space-evenly;
+}
+
+#comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  border: 1px solid #000;
+  padding: 1vh 2vw;
+  border-radius: 10px;
+}
+
+.shows-total-number {
+  font-size: 1rem;
+  color: #303030c4;
+}
+
+.footer-buttons {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#addCommentDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.divCommentFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.divCommentFields input,
+textarea {
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.comments-button:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.comments-button:active {
+  width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  cursor: pointer;
+  background-color: orange;
+  color: #fff;
+}
+
+.reservations-button:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.reservations-button:active {
+  width: 80%;
+  border: 2px solid #000;
+  min-height: 4vh;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: orange;
+  color: #fff;
+}
+
+.btnAdd {
+  border: 2px solid #000;
+  box-shadow: 3px 5px 3px #000;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  border: 2px solid #7d7d7d;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: #303030c4;
+  color: #fff;
+}
+
+.btnAdd:active {
+  border: 2px solid #000;
+  box-shadow: 3px 5px 3px #7d7d7d;
+  background-color: orange;
+  color: #fff;
+}
+
+@media (min-width: 760px) {
+  .mobile {
+    padding: 1em 10em;
+  }
+
+  .Logo {
+    max-width: 80px;
+  }
+
+  .links-li {
+    font-size: 2.2rem;
+  }
+
+  footer {
+    padding-left: 3em;
+  }
+
+  .footer-text {
+    margin-left: 8vw;
+    font-size: 1.5rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 3vh 10vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 30vw;
+  }
+
+  .card-image {
+    max-width: 10vw;
+  }
+
+  .like-movie {
+    max-width: 2vw;
+  }
+
+  .card-header-text {
+    font-size: 1rem;
+  }
+
+  .containerPopUp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 20px;
+    padding: 7em;
+    gap: 1em;
+    max-width: inherit;
+    text-align: center;
+    border: 2px solid #7d7d7d;
+    height: 70vh;
+    border-radius: 35px;
+    background: #e0e0e0;
+    box-shadow:
+      inset 29px 29px 57px #7d7d7d,
+      inset -29px -29px 57px #fff;
+  }
+
+  .popUp-section {
+    max-width: 70vw;
+  }
+
+  .image-popup {
+    box-shadow: 0 0 20px #000;
+    max-height: 100%;
+  }
+
+  #siteSerie {
+    font-size: 1rem;
+    color: blue;
+  }
+
+  .main-popupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 50%;
+  }
+
+  .close-popup {
+    position: absolute;
+    right: 3.5em;
+    top: 5em;
+    cursor: pointer;
+    font-size: x-large;
+  }
+
+  #summarySerie {
+    font-size: 1rem;
+  }
+
+  #commentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shows-total-number {
+    font-size: 1.5rem;
+  }
+}
